@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Coxswain Recording of the 1997 Record Breaking Win by the National Men's Team at the Head of The Charles Regatta<note place="bottom">The Head of the Charles Regatta is one of the world’s most prestigious and celebrated rowing events, bringing together elite athletes and teams from across the globe to compete on Boston’s iconic Charles River.</note><figure><graphic height="300px" url="https://www.britannica.com/place/Charles-River"></graphic></figure></title><author><seg ana="not applicable">NA</seg></author><editor>Pete Cipollone and Oli Rosenbladt</editor>
+</titleStmt>
+<publicationStmt>
+<p>Source, <ref target="https://www.row2k.com/">Row2k.com</ref>— The following is a transcript from a 1997 recording of the coxswain <ref target="https://en.wikipedia.org/wiki/Pete_Cipollone">Pete Cipollone</ref>. The source provided both the <seg ana="contains explicit language">recording and transcript.</seg></p>
+</publicationStmt>
+<sourceDesc>
+<p>Row2k.com is an online publication source for major and minor rowing news: covering photography, race results, interviews, live reports, and more on the national, collegiate, and youth rowing levels.</p>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<body>
+<div type="section" n="1">
+<head>Practice: at the starting line before the race begins</head>
+<p><hi rend="italic">(Urgently)</hi></p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p><hi rend="italic">(quietly now)</hi></p>
+<p>Fo'</p>
+<p>Fi' chaa<note place="bottom">Coxswains often use different <ref target="https://learntorowstjohns.ca/coxes-corner/coachingcoxswain-calls/">calls, phrases, or sounds</ref></note> to motivate their rowers depending on the circumstance and what the rower may need at that point of the race.</p>
+<p>Six chaa</p>
+<p>Seven cha</p>
+<p>Eight -<note place="bottom">Cipollone is counting the number of strokes. In this case, he is counting because the rowers are performing strokes with a certain technique or goal in mind; aka "a foucused (insert any number)". Example: when the rowers aren't pushing hard enough with their legs, the coxswain will call for a focused 10 for legs which means that each rower needs to realign with their technique and the amount of strength they are exerting from their legs.</note></p>
+<p><hi rend="italic">(much stronger and louder)</hi></p>
+<p>in two we shift<note place="bottom">when rowers "shift" it refers to either increasing or decreasing (in this case, increasing) the pace of the stroke</note></p>
+<p>One we're at 36<note place="bottom">36 is their pace</note></p>
+<p>Power... now shift!</p>
+<p>Push send,</p>
+<p>2 chaa</p>
+<p>Three</p>
+<p>Fo'</p>
+<p>Fi' easy all easy all...</p>
+<p>We got crews around, paddle<note place="bottom">row lightly/with less strength</note> paddle.</p>
+<p>Give us a little room, <ref target="https://en.wikipedia.org/wiki/University_of_Pennsylvania">Penn</ref>...</p>
+<p>Weigh enough<note place="bottom">In rowing, “weigh enough” is a traditional call from the coxswain telling the rowers to stop rowing and let their oars rest on the water.</note>, watch the oars on port side... ok all eight ready, go.</p>
+<p><hi rend="italic">(2 strokes)</hi></p>
+<p>Sharp. Weigh enough.</p>
+<p>Ok, how do you guys feel on warmup? Everybody's ready?</p>
+<p>Breathing, getting ready guys.</p>
+</div>
+<div type="section" n="2">
+<head>Beginning of race</head>
+<p><hi rend="bold" style="color #FFEF12">Note that now after a sufficient preparation period on the water to establish rhythm in the conditions and get the athletes' heart rates up, the rowers and coxswains enter the race course and align in their designated lanes.</hi></p>
+<p><hi rend="italic">(Official: this is the start of the Championship 8. Ok, let's get started. US Rowing on the paddle, ready, row!)</hi></p>
+<p>Ready all...</p>
+<p>Ready all, rrrr-ow!</p>
+<p><hi rend="italic">(calmly)</hi> OK <ref target="https://www.riversiderowing.asn.au/blog/race-strategy-pacing-and-power-distribution-in-rowing">half power</ref> on this finish, good, sharp and clean. Ok guys they're going to stall, so let's fg walk away, relaxed, <ref target="https://www.riversiderowing.asn.au/blog/race-strategy-pacing-and-power-distribution-in-rowing">90 percent now... three to build...</ref></p>
+<p><hi rend="italic">(about two octaves lower, hoary, growling)</hi></p>
+<p><hi style="font-size 24pt">ON THIS ONE!</hi></p>
+<p>Legs...</p>
+<p>Legs...</p>
+<p>Legs! Give it! Nail this motherfr, now! You're On!</p>
+<p>Ha! <hi style="font-size 24pt">HAAA!</hi></p>
+<p>2</p>
+<p>3</p>
+<p>fo'</p>
+<p>5 cha! walking!<note place="bottom">when the boat is gradually moving farther ahead of another boat, gaining ground and increasing its lead during a race.</note></p>
+<p>6 That's it!</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10 chaa!</p>
+<p>1</p>
+<p>2</p>
+<p>39!<note place="bottom">referring to stroke pace/rate</note></p>
+<p><hi rend="italic">(very clearly, enunciating)</hi></p>
+<p>In two, we shift two beats!</p>
+<p>1</p>
+<p>Shift, Now!</p>
+<p><hi rend="italic">(intensely)</hi></p>
+<p>Legs, send.</p>
+<p>Legs, send.</p>
+<p>Legs, send.</p>
+<p><hi rend="italic">(calmly again)</hi></p>
+<p>36, good. One part drive...</p>
+<p>Attack!</p>
+<p>Legs, that's it.</p>
+<p><hi rend="italic">(cheering from shore)</hi></p>
+<p>Now Madigan, go! Take that handle with you, and attack it. That's it.</p>
+<p><hi rend="italic">(echoing as crew goes under BU Bridge)</hi></p>
+<p>Push, chaaa! Push, chaaa!</p>
+<p>We got flat water, <seg ana="new call to make">A** to ANKLES</seg>, NOW!</p>
+<p>Go!</p>
+<p>Callahan, this is your fucking seat race, show em. Now, go!</p>
+<p>Legs, send, Legs, send. Legs, send. Legs, send</p>
+<p>That's it, walk away from those fuckers!</p>
+<p>Now! Send!</p>
+<p>Legs, send.</p>
+<p><hi rend="italic">(whispers)</hi></p>
+<p>Pushing, you're right on 36.</p>
+<p>Now listen up! One minute down, let's get focused on rhythm, and speed through. Here we go, now speed <seg ana="what does five mean?">five</seg>.</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p>Push, send. Yeah.</p>
+<p>Four</p>
+<p>Five.</p>
+<p>Good, driving. Stay clean, and flat. On the rudder,<figure><graphic height="150px" url="https://www.rowingnews.com/wp-content/uploads/2022/11/201701671.jpg"></graphic></figure> here we go.</p>
+<p>Push, chaaaaaa!</p>
+<p>Push, chaaaaaa!</p>
+<p>Push, chaaaaaa!</p>
+<p>That's it, port sides are cranking!</p>
+<p>Drrr-ive.</p>
+<p>Drrr-ive.</p>
+<p><seg ana="more repetition for effect and emphasis; common in cox calls">Drrr-ive.</seg></p>
+<p>Richter, you do not sit, for one fucking stroke! You drive the starboard side.</p>
+<p>That's it. Now Wherley!</p>
+<p>Push send.</p>
+<p>On the rudder.</p>
+<p><hi rend="italic">(whispers)</hi></p>
+<p>That's it.</p>
+<p>Good Giboon, good fucking rhythm. Now Philthy, here we go.</p>
+<p>On the rudder.</p>
+<p>Legs, chaaa. Legs, chaaa. Legs, chaaa. Good, driving it and push. Let's walk away, driving it now, let's walk away. Madigan, good rhythm, take the handle with you, now.</p>
+<p>Push, chaaa. Push, chaaa.</p>
+<p>35 and half, catches stay in, stay in.</p>
+<p>Pop, send.</p>
+<p>Pop, send.</p>
+<p>Pop, send.</p>
+<p><hi rend="italic">(at this point, there is less noise from the crew's riggers<note place="bottom">a rigger is an attached part of the boat where oars are held</note>)</hi></p>
+<p>That's it.</p>
+<p>Now, here comes a <ref target="https://www.reddit.com/r/Rowing/comments/tt4xad/how_to_deal_with_tail_head_and_cross_winds/">headwind</ref>, sit up and drive. Legs, send. Legs, send.</p>
+<p>Catches in all 8, let's go five strokes for catches, now go!</p>
+<p>1 here we go</p>
+<p>2 I got a line on the bridge.</p>
+<p>Chaa</p>
+<p>Fo'</p>
+<p>Five, 35. Catches in, <hi rend="italic">(whispers)</hi> that's it. Catches in.</p>
+<p>Guys you're the mean fucking dogs, drive this thing, now.</p>
+<p>That's it. Send. Legs, send. Legs, send.</p>
+<p>Richter you can see them, I want you driving us away from them.</p>
+<p>Now, go!</p>
+<p>That's it, power! You've got flat water, <hi rend="italic">(almost crazed sounding)</hi> Attack, attack</p>
+<p>Now, 450 until the first fucking commitment Wherley, Wherley! Now, drive it, that's it!</p>
+<p>Legs, send.</p>
+<p>Legs, send.</p>
+<p>Good drive it, push.</p>
+<p>Push, send, push, send.</p>
+<p>Do not sit! Do not sit now! Seven, six and five, go!</p>
+<p>Legs! Legs, send! Legs, send!</p>
+<p><hi rend="italic">(almost conversationally)</hi></p>
+<p>That's it, walk away. Walk - the fuck - away! Good rhythm, good rhythm!</p>
+<p>Now listen up. Bow pair<note place="bottom">The bow pair are the two rowers in the very back of the boat</note>, one part drive, attaaack, now!</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p><hi rend="italic">(whispers)</hi></p>
+<p>That's it.</p>
+<p>Work it, work the rhythm, attacking. Gotta come up one, get ready...</p>
+<p>On this, kick it.</p>
+<p>Pop, make it light.</p>
+<p>Pop, make it light.</p>
+<p>That's it. Back out to even spacing, now go!</p>
+<p>Legs!</p>
+<p>Ok guys, here's the first bridge, in the wind. Get ready to commit... ready?</p>
+<p><hi rend="italic">(under bridge, echoing tremendously)</hi></p>
+<p><hi style="font-size 24pt">COMMI-I-I-I-I-IT!</hi></p>
+<p>Legs!</p>
+<p>Legs.</p>
+<p>That's it, this is one minute commitment, push. Push the boat.</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p>Walking away, walking away from Princeton.</p>
+<p>Go, now, push, chaaaa.</p>
+<p>Drive, you're halfway through the commitment, now go!</p>
+<p>Legs!</p>
+<p><hi rend="italic">(whispers)</hi></p>
+<p>That's it!</p>
+<p>Legs!</p>
+<p>Now, Borcherding, Borcherding, get it in, get it in, and go. Boom, in the headwind. That's it!</p>
+<p>Driving, drive, send.</p>
+<p>Catches in, 34 and half. Who's going to assault?</p>
+<p>Push, now.</p>
+<p>Push, now.</p>
+<p><seg ana="whispers to emphasize call"><hi rend="italic">(whispers)</hi></seg></p>
+<p>That's it!</p>
+<p>Good, coming to the end of the bridge, end of the commitment, now is where you fucking hang tough.</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p>Good, Giboon, you're five minutes in, drive it, now go.</p>
+<p>That's it, legs, chaaaa, legs, chaaa.</p>
+<p><hi rend="italic">(cheering from around Western Ave. bridge)</hi></p>
+<p>They're cheering for you, you go now! Push it!</p>
+<p>Richter, Princeton's going to win this fucking piece, huh? What do you think of that?</p>
+<p>Now, go!</p>
+<p>Legs</p>
+<p>Legs</p>
+<p>Legs</p>
+<p>Good.</p>
+<p>Slight rudder, now, that's it.</p>
+<p>Push, chaaa.</p>
+<p>Push, chaaa.</p>
+<p>Push, chaaa.</p>
+<p>Going, that's it, driving it. Guys, you must attack., now.</p>
+<p><hi rend="italic">(cheering subsides, very little outside noise)</hi></p>
+<p>We're in the quiet, good time to walk away. Here we go.</p>
+<p>Push!</p>
+<p>The next turn will be to port, and it's the big dog. Here we go.</p>
+<p>Push, send</p>
+<p>Push, send</p>
+<p>Push, send</p>
+<p>Driving, that's it, starboards attack it, cadence is 35, good! Going, go now.</p>
+<p>Push, send</p>
+<p>Push, send</p>
+<p>Push, send</p>
+<p>Good, a little bit of rudder.</p>
+<p><hi rend="italic">(whispers)</hi></p>
+<p>That's it.</p>
+<p>Going, now.</p>
+<p>Going, now.</p>
+<p>Starboard sides, get ready to attack, get ready to go, ready,</p>
+<p><hi style="font-size 24pt">ATTAAACCKKK!</hi></p>
+<p>Legs</p>
+<p>Legs</p>
+<p><hi rend="italic">(whispers)</hi></p>
+<p>That's it.</p>
+<p>Legs</p>
+<p>Good</p>
+<p>Here we go guys, we're going to nail this turn. That's it; going starboards...</p>
+<p>Straight now! Straight now!</p>
+<p>Push, send.</p>
+<p>Push, send.</p>
+<p>That's it. Get ready, coming on the rudder, starboards now... Go!</p>
+<p><hi rend="italic">(cheering begins to swell)</hi></p>
+<p>Legs! Yeah, fuck yeah, USA, go! That's it, go! yeah, driving it, fuck yeah! Push it!</p>
+<p>They're cheering for you, they're cheering for you right now. Push it.</p>
+<p>Now, tell me Callahan, who's tough?</p>
+<p>Now, drive.. the legs!</p>
+<p>Legs, now!</p>
+<p>Legs, now!</p>
+<p>You must fucking go...</p>
+<p><hi style="font-size 24pt">NOOWWW!</hi></p>
+<p><hi rend="italic">(lower)</hi></p>
+<p>Yeah, Philthy, yeah, Philthy! you tear this...</p>
+<p><hi rend="italic">(unprintable, even with disclaimer)</hi></p>
+<p><hi rend="italic">(cooly, conversationally)</hi></p>
+<p>I want you to refocus. Sit up tall, and push the legs down, with the handle, Madigan, go, NOW!</p>
+</div>
+<div type="section" n="3">
+<head>End of Race</head>
+<p>Guys, listen up, 12:40 down, I think you can break the fucking record!</p>
+<p>Get ready, get ready...</p>
+<p>Go now!</p>
+<p><hi rend="bold" style="color #FFEF12">The team comes in first, breaking the record for Men's 8+s in this division at Head of the CHarles Regatta --- at 32 year old race at this point.</hi><figure><graphic height="300px" url="https://assets.podomatic.net/ts/54/6a/b8/coach7169/600x600_11027285.jpg"></graphic></figure></p>
+</div>
+</body>
+</text>
+</TEI>

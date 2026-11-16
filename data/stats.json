@@ -1,0 +1,77 @@
+{
+  "stats": {
+    "utterances": 196,
+    "words": 949,
+    "expletives": 16,
+    "whispers": 8,
+    "rateCalls": 8,
+    "namedCalls": 18
+  },
+  "callTypes": {
+    "ct-rate": 12,
+    "ct-steering": 13,
+    "ct-technique": 8,
+    "ct-position": 5,
+    "ct-motivation": 16,
+    "ct-info": 8
+  },
+  "mentions": {
+    "madigan": 3,
+    "callahan": 2,
+    "richter": 3,
+    "wherley": 3,
+    "gibbons": 2,
+    "henry": 3,
+    "borcherding": 2
+  },
+  "strokeRates": [
+    {
+      "i": 10,
+      "rate": 36.0,
+      "text": "One, we're at 36",
+      "section": "warmup"
+    },
+    {
+      "i": 43,
+      "rate": 39.0,
+      "text": "39!",
+      "section": "race"
+    },
+    {
+      "i": 50,
+      "rate": 36.0,
+      "text": "36, good. One part drive...",
+      "section": "race"
+    },
+    {
+      "i": 62,
+      "rate": 36.0,
+      "text": "Pushing, you're right on 36.",
+      "section": "race"
+    },
+    {
+      "i": 86,
+      "rate": 35.5,
+      "text": "35 and a half, catches stay in, stay in.",
+      "section": "race"
+    },
+    {
+      "i": 97,
+      "rate": 35.0,
+      "text": "Five, 35. Catches in, that's it. Catches in.",
+      "section": "race"
+    },
+    {
+      "i": 138,
+      "rate": 34.5,
+      "text": "Catches in, 34 and a half. Who's going to assault?",
+      "section": "race"
+    },
+    {
+      "i": 165,
+      "rate": 35.0,
+      "text": "Driving, that's it, starboards attack it, cadence is 35, good! Going, go now.",
+      "section": "race"
+    }
+  ]
+}

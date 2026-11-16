@@ -1,0 +1,89 @@
+<div class="prose">
+<h2 style="margin-top:0">About this edition</h2>
+<p>This is version 2.0 of a TEI P5 encoding of coxswain Pete Cipollone's in-boat recording from the US Rowing men's Championship Eight at the Head of the Charles Regatta on 19 October 1997. The crew started first, finished first in 13:58.9, and set a course record that lasted until 2017. row2k.com published the audio and transcript in 2010, with the audio digitized by Cipollone and Oli Rosenbladt.</p>
+<p>Version 1.0, the original student encoding, is kept unchanged in <a href="original/cipollone-1997-original.xml"><code>original/</code></a>. Both versions validate against <code>tei_all</code>. The revision is about meaning, accuracy and reuse, not schema errors.</p>
+
+<h2>Recommendations</h2>
+<p class="muted">Items marked <span class="pill done">done</span> are carried out in this version. Items marked <span class="pill next">next</span> are proposed for future work.</p>
+
+<div class="rec"><div class="n">1</div><div><h3>Correct the factual notes <span class="pill done">done</span></h3>
+<p>The bow pair note placed the pair "in the very back of the boat". The bow pair are seats 1 and 2, at the front of the boat. The closing note called the regatta a "32 year old race" and gave no time. The 1997 race was the 32nd regatta, because 1996 was cancelled by a storm, and the official time was 13:58.9, a course record. The note "36 is their pace" now explains stroke rate in strokes per minute. Every correction is tagged <code>&lt;note type="correction"&gt;</code> and cites its source.</p></div></div>
+
+<div class="rec"><div class="n">2</div><div><h3>Give the header real responsibility and source metadata <span class="pill done">done</span></h3>
+<p><code>&lt;author&gt;NA&lt;/author&gt;</code> and the listing of Cipollone and Rosenbladt as editors are replaced with <code>&lt;respStmt&gt;</code> entries for speaker, digitizers, publisher and encoder. A full <code>&lt;bibl&gt;</code> records the row2k feature with its URL and date, and <code>&lt;recordingStmt&gt;</code> describes the audio. The header also adds a rights statement, <code>&lt;editionStmt&gt;</code> and <code>&lt;revisionDesc&gt;</code>.</p></div></div>
+
+<div class="rec"><div class="n">3</div><div><h3>Encode speech as speech <span class="pill done">done</span></h3>
+<p>The text is a recording, not prose, so <code>&lt;p&gt;</code> plus italic "stage directions" becomes the TEI spoken-text module. Each call is a <code>&lt;u who="#cipollone"&gt;</code>. Voice changes become <code>&lt;shift feature="voice" new="whisper"/&gt;</code>, and crowd noise and bridge echoes become <code>&lt;incident&gt;</code>. The starting official's words are no longer an anonymous italic paragraph. They are attributed with <code>who="#official"</code>.</p>
+<pre>&lt;!-- 1.0 --&gt;
+&lt;p&gt;&lt;hi rend="italic"&gt;(whispers)&lt;/hi&gt;&lt;/p&gt;
+&lt;p&gt;Pushing, you're right on 36.&lt;/p&gt;
+
+&lt;!-- 2.0 --&gt;
+&lt;u who="#cipollone" ana="#ct-rate"&gt;&lt;shift feature="voice" new="whisper"/&gt;
+  Pushing, you're right on &lt;measure type="strokeRate" unit="spm" quantity="36"&gt;36&lt;/measure&gt;.&lt;/u&gt;</pre></div></div>
+
+<div class="rec"><div class="n">4</div><div><h3>Identify the people and places <span class="pill done">done</span></h3>
+<p>row2k gives the crew bow to stern. <code>&lt;particDesc&gt;</code> now lists all nine people with seats and colleges, and each name in the transcript points to that list, nicknames included ("Philthy" is Phil Henry and "Giboon" is Jonathan Gibbons, both marked as editorial inferences). <code>&lt;settingDesc&gt;</code> lists the course bridges in order, which links the calls to the river. See <a href="crew-and-course.html">Crew &amp; course</a>.</p></div></div>
+
+<div class="rec"><div class="n">5</div><div><h3>Use <code>@ana</code> and notes for what they are for <span class="pill done">done</span></h3>
+<p>In 1.0, <code>@ana</code> held free-text comments such as <code>ana="what does five mean?"</code>. TEI defines <code>@ana</code> as pointers to interpretations. Those comments are now typed notes (<code>editorial</code>, <code>query</code>, <code>correction</code>, <code>context</code>), and <code>@ana</code> points to a seven-category <code>&lt;taxonomy&gt;</code> of call types. That makes the transcript filterable and countable.</p></div></div>
+
+<div class="rec"><div class="n">6</div><div><h3>Move styling into the header <span class="pill done">done</span></h3>
+<p>Values like <code>style="color #FFEF12"</code> and <code>style="font-size 24pt"</code> are not valid CSS, because they lack the colon. They are replaced with <code>&lt;rendition&gt;</code> definitions in <code>&lt;tagsDecl&gt;</code>, referenced with <code>rendition="#shout"</code> and <code>rendition="#context"</code>.</p></div></div>
+
+<div class="rec"><div class="n">7</div><div><h3>Build a glossary instead of scattered footnotes <span class="pill done">done</span></h3>
+<p>Twenty-five rowing terms are defined once in <code>&lt;back&gt;</code>, and each use points to them with <code>&lt;term ref="#gl-…"&gt;</code>. On the site they appear as hover and keyboard-focus tooltips. The 1.0 note on "Fi' chaa", where the note text ran into the transcript line, is fixed.</p></div></div>
+
+<div class="rec"><div class="n">8</div><div><h3>Stop hotlinking images <span class="pill done">done</span></h3>
+<p>One <code>&lt;graphic&gt;</code> pointed at a Britannica web page rather than an image file. The others hotlinked copyrighted photos from third-party sites. They are replaced with original SVG diagrams of the boat and course. Any photos added later should be openly licensed and carry a <code>&lt;figDesc&gt;</code> for screen readers.</p></div></div>
+
+<div class="rec"><div class="n">9</div><div><h3>State a consistent profanity policy <span class="pill done">done</span></h3>
+<p>1.0 censored some words but not others. row2k left the profanity in deliberately. The policy is now declared in <code>&lt;editorialDecl&gt;</code>, every expletive is marked <code>&lt;seg type="expletive"&gt;</code>, and readers can mask them with a toggle, which suits classroom use.</p></div></div>
+
+<div class="rec"><div class="n">10</div><div><h3>Turn the encoding into data <span class="pill done">done</span></h3>
+<p>Stroke rates, elapsed times and distances are encoded with <code>&lt;measure&gt;</code>. <code>scripts/build.py</code> builds every page of this site from the TEI, including the <a href="analysis.html">analysis charts</a>, so the site cannot drift from the XML.</p></div></div>
+
+<div class="rec"><div class="n">11</div><div><h3>Synchronize with the audio <span class="pill next">next</span></h3>
+<p>Ask row2k for permission, then add a <code>&lt;timeline&gt;</code> with <code>@start</code> and <code>@end</code> on each <code>&lt;u&gt;</code> so the edition can highlight the line being spoken. A first anchor is already known: the "here comes a headwind" call is at 15:53 of the full recording. row2k has had an unauthorized copy of the audio removed from YouTube, so link to the audio rather than rehosting it.</p></div></div>
+
+<div class="rec"><div class="n">12</div><div><h3>Encode the full 27 minutes <span class="pill next">next</span></h3>
+<p>This excerpt stops at 12:40. The full row2k transcript includes the row to the start, the officials' clock confusion and the finish, where the cox calls 14:03 against the official 13:58.9. That gap between the two times deserves an editorial note.</p></div></div>
+
+<div class="rec"><div class="n">13</div><div><h3>Add a comparison text <span class="pill next">next</span></h3>
+<p>row2k also published Seth Bauer's recording from the same day, coxing the ten-year reunion of the 1987 world champion eight. Encoding it with the same taxonomy would allow a real comparison of two elite coxswains.</p></div></div>
+
+<div class="rec"><div class="n">14</div><div><h3>Resolve the open queries <span class="pill next">next</span></h3>
+<p>Several readings remain uncertain: "A** to ankles", "speed five", which turn "the big dog" refers to, and the two nicknames. A short email or oral-history interview with Cipollone or a crew member could settle them. Record the answers with <code>@resp</code> and <code>@cert</code>.</p></div></div>
+
+<div class="rec"><div class="n">15</div><div><h3>Code every call, and check agreement <span class="pill next">next</span></h3>
+<p>Pure rhythm calls ("Push, send") are still uncoded. Coding all of them, with a second coder working independently, would make the call-type counts publishable.</p></div></div>
+
+<div class="rec"><div class="n">16</div><div><h3>Automate quality checks <span class="pill next">next</span></h3>
+<p>Add a Schematron rule that every <code>@ref</code> and <code>@who</code> resolves to an <code>@xml:id</code>, and a GitHub Actions workflow that validates the TEI and rebuilds the site on every push.</p></div></div>
+
+<div class="rec"><div class="n">17</div><div><h3>Map the course <span class="pill next">next</span></h3>
+<p>Replace the schematic with a real map, such as GeoJSON with Leaflet. Give each bridge <code>&lt;geo&gt;</code> coordinates and place markers where each call was made.</p></div></div>
+
+<h2>Repository layout</h2>
+<pre>data/cipollone-hocr-1997.xml     revised TEI P5 edition (source of truth)
+data/stats.json                  figures computed from the TEI
+original/cipollone-1997-original.xml   version 1.0, unchanged
+scripts/build.py                 builds all HTML pages from the TEI
+scripts/about.fragment.html      this page's content
+assets/style.css, assets/site.js
+index.html, crew-and-course.html, analysis.html, about.html   generated</pre>
+<p>To rebuild: <code>pip install lxml</code>, then <code>python3 scripts/build.py</code>.</p>
+
+<h2>Sources</h2>
+<ul style="font-family:var(--sans);font-size:15px">
+<li><a href="https://www.row2k.com/features/488/pete-cipollone-olympic-gold-medalist-coxing-the-1997-head-of-the-charles/">row2k, “Pete Cipollone, Olympic gold medalist, coxing the 1997 Head Of The Charles” (2010)</a>: transcript, audio and crew list</li>
+<li><a href="https://www.row2k.com/features/489/seth-bauer-and-pete-cipollone-cox-the-1997-head-of-the-charles/">row2k, Seth Bauer and Pete Cipollone cox the 1997 Head of the Charles</a></li>
+<li><a href="https://hocr.org/?p=185">Head of the Charles: course champions (1997 US Rowing 13:58.9, course record; 1996 cancelled)</a></li>
+<li><a href="https://www.hocr.org/wp-content/uploads/2019/06/1997-Results.pdf">HOCR official results, 19 October 1997</a></li>
+<li><a href="https://www.thedp.com/article/1997/10/crews_just_average_at_head_of_charles">The Daily Pennsylvanian, October 1997 (finishing order)</a></li>
+<li><a href="https://www.hocr.org/10-22-17-mens-champ-eights">HOCR, 2017 men's champ eights (Cal's 13:27 breaks the 1997 record)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Head_of_the_Charles_Regatta">Wikipedia, Head of the Charles Regatta</a></li>
+<li><a href="https://readyallrow.org/?p=14199">Ready All Row, coxing recordings (timestamp of the headwind call)</a></li>
+<li><a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/TS.html">TEI P5 Guidelines, ch. 8: Transcriptions of Speech</a></li>
+</ul>
+</div>

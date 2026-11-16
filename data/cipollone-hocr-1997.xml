@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">"Walk Away": Pete Cipollone Coxes the 1997 Head of the Charles</title>
+        <title type="sub">A TEI edition of the coxswain recording from the US Rowing men's Championship Eight, 19 October 1997</title>
+        <respStmt>
+          <resp>Speaker (coxswain)</resp>
+          <persName ref="#cipollone">Pete Cipollone</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Digitization of the original audio</resp>
+          <persName>Pete Cipollone</persName>
+          <persName>Oli Rosenbladt</persName>
+        </respStmt>
+        <respStmt>
+          <resp>Transcript publisher</resp>
+          <orgName>row2k.com</orgName>
+        </respStmt>
+        <respStmt>
+          <resp>TEI encoding, annotation, and editing</resp>
+          <persName xml:id="encoder">Project editor (see README)</persName>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2.0">Revised edition, November 2026. Version 1.0 was the student encoding preserved in <ref target="../original/cipollone-1997-original.xml">original/</ref>.</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>Published as a GitHub Pages digital edition</publisher>
+        <date when="2026-11-15">15 November 2026</date>
+        <availability status="restricted">
+          <p>The transcript text is quoted from row2k.com for non-commercial, educational use. row2k holds the rights to the transcript and audio. They are not relicensed here. The encoding, annotations, glossary and site code are released under <ref target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</ref>.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title>Pete Cipollone, Olympic gold medalist, coxing the 1997 Head Of The Charles</title>
+          <publisher>row2k.com</publisher>
+          <date when="2010-09-20">20 September 2010</date>
+          <ref target="https://www.row2k.com/features/488/pete-cipollone-olympic-gold-medalist-coxing-the-1997-head-of-the-charles/">row2k feature 488</ref>
+          <note>row2k is an online rowing publication covering results, photography, interviews and live reports at the national, collegiate and youth levels. The feature includes the streaming audio and the transcript. The full recording runs about 27 minutes and includes the row to the start and staging. This edition encodes an excerpt.</note>
+        </bibl>
+        <recordingStmt>
+          <recording type="audio">
+            <date when="1997-10-19"/>
+            <respStmt>
+              <resp>Recorded in the boat from the coxswain's microphone</resp>
+              <persName ref="#cipollone">Pete Cipollone</persName>
+            </respStmt>
+            <equipment><p>Cox box / coxswain microphone recording, later digitized.</p></equipment>
+          </recording>
+        </recordingStmt>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+      <projectDesc>
+        <p>The edition presents a coxswain's live race calls as spoken text. It shows how a coxswain manages rhythm, technique, steering, and motivation over a three-mile head race, and connects the calls to the people in the boat and the places on the course.</p>
+      </projectDesc>
+      <editorialDecl>
+        <normalization><p>Spelling is not normalized. Clipped counts (Fo', Fi') and the rhythmic exhalation "chaa" are kept as transcribed.</p></normalization>
+        <hyphenation><p>Drawn-out sounds (Drrr-ive, COMMI-I-I-IT) are kept as transcribed.</p></hyphenation>
+        <correction><p>Typing errors in the 1.0 annotations were corrected. Factual errors in the 1.0 notes were corrected with sources (see the notes with type="correction").</p></correction>
+        <p>Profanity: row2k left profanity in on purpose, as part of the record of the sport's intensity. Version 1.0 censored some words (motherf—r, A**) but not others. This edition keeps the 1.0 forms where they appear and marks every expletive with &lt;seg type="expletive"&gt;, so that a reader can filter them in the web edition. One passage is omitted in the source itself. It is marked with &lt;gap&gt;.</p>
+        <p>Paralinguistic features: the stage-direction style italic comments in 1.0 (for example "(whispers)") are encoded with the TEI spoken-text elements &lt;shift&gt;, &lt;incident&gt; and &lt;vocal&gt;.</p>
+      </editorialDecl>
+      <tagsDecl>
+        <rendition xml:id="shout" scheme="css">font-size: 1.5em; font-weight: 800; text-transform: uppercase;</rendition>
+        <rendition xml:id="context" scheme="css">color: #8a6d00; font-weight: 700;</rendition>
+      </tagsDecl>
+      <classDecl>
+        <taxonomy xml:id="calltypes">
+          <category xml:id="ct-rhythm"><catDesc>Rhythm and cadence calls (Push, send; Legs, chaa)</catDesc></category>
+          <category xml:id="ct-technique"><catDesc>Technical calls (catches in, sit up, sharp and clean)</catDesc></category>
+          <category xml:id="ct-rate"><catDesc>Stroke-rate and shift calls</catDesc></category>
+          <category xml:id="ct-steering"><catDesc>Steering and course calls (on the rudder)</catDesc></category>
+          <category xml:id="ct-position"><catDesc>Race-position calls (walking away, other crews)</catDesc></category>
+          <category xml:id="ct-motivation"><catDesc>Personal and motivational calls to named rowers</catDesc></category>
+          <category xml:id="ct-info"><catDesc>Information calls (time elapsed, distance, conditions)</catDesc></category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+
+    <profileDesc>
+      <langUsage><language ident="en-US">American English, rowing jargon</language></langUsage>
+      <textClass>
+        <keywords scheme="#local">
+          <term>rowing</term><term>coxswain</term><term>head race</term><term>Head of the Charles Regatta</term><term>spoken text</term><term>sports communication</term>
+        </keywords>
+      </textClass>
+      <particDesc>
+        <listPerson type="crew">
+          <head>US Rowing Championship Eight, 1997, bow to stern (per row2k)</head>
+          <person xml:id="callahan" role="rower"><persName>Michael Callahan</persName><affiliation>University of Washington '96</affiliation><note>Bow seat (1)</note></person>
+          <person xml:id="holbrook" role="rower"><persName>Ben Holbrook</persName><affiliation>Brown '97</affiliation><note>Seat 2. Possibly the "Benny" heard in the full recording. Not named in this excerpt.</note></person>
+          <person xml:id="borcherding" role="rower"><persName>Kurt Borcherding</persName><affiliation>Wisconsin '90</affiliation><note>Seat 3</note></person>
+          <person xml:id="madigan" role="rower"><persName>Matt Madigan</persName><affiliation>Santa Clara '93</affiliation><note>Seat 4</note></person>
+          <person xml:id="wherley" role="rower"><persName>Mike Wherley</persName><affiliation>Minnesota '95</affiliation><note>Seat 5</note></person>
+          <person xml:id="henry" role="rower"><persName>Phil Henry</persName><persName type="nickname">Philthy</persName><affiliation>Washington '94</affiliation><note>Seat 6. "Philthy" is taken to be Henry's nickname. row2k does not state it.</note></person>
+          <person xml:id="richter" role="rower"><persName>Tim Richter</persName><affiliation>Princeton '97</affiliation><note>Seat 7. He rowed on the starboard side, as the call "You drive the starboard side" shows.</note></person>
+          <person xml:id="gibbons" role="rower"><persName>Jonathan Gibbons</persName><persName type="nickname">Giboon</persName><affiliation>Harvard '96</affiliation><note>Stroke (seat 8). "Giboon" is taken to refer to Gibbons.</note></person>
+          <person xml:id="cipollone" role="coxswain"><persName>Pete Cipollone</persName><birth when="1971-02-05"/><affiliation>California '94</affiliation><note>World champion coxswain of the US men's eight in 1997, 1998 and 1999. Olympic gold medalist in the men's eight in 2004.</note></person>
+        </listPerson>
+        <listPerson type="other">
+          <person xml:id="official" role="official"><persName>Regatta starting official</persName></person>
+          <person xml:id="crowd" role="spectators"><persName>Spectators on shore and bridges</persName></person>
+        </listPerson>
+        <listOrg>
+          <org xml:id="princeton"><orgName>Princeton University</orgName><note>Finished third in the 1997 Championship Eight.</note></org>
+          <org xml:id="penn"><orgName>University of Pennsylvania</orgName><note>Finished fifth in the 1997 Championship Eight.</note></org>
+        </listOrg>
+      </particDesc>
+      <settingDesc>
+        <setting>
+          <name type="event">Head of the Charles Regatta, Championship Eights (men)</name>
+          <date when="1997-10-19">Sunday, 19 October 1997</date>
+          <locale>Charles River, Boston and Cambridge, Massachusetts. Three-mile (4.8 km) upstream head race against the clock.</locale>
+        </setting>
+        <listPlace type="course">
+          <head>Course landmarks, start to finish (upstream)</head>
+          <place xml:id="start" n="0"><placeName>Start, near the BU DeWolfe Boathouse</placeName></place>
+          <place xml:id="bu-bridge" n="1"><placeName>BU Bridge</placeName></place>
+          <place xml:id="river-st" n="2"><placeName>River Street Bridge</placeName></place>
+          <place xml:id="western-ave" n="3"><placeName>Western Avenue Bridge</placeName></place>
+          <place xml:id="weeks" n="4"><placeName>Weeks Footbridge</placeName></place>
+          <place xml:id="anderson" n="5"><placeName>Anderson Memorial Bridge</placeName></place>
+          <place xml:id="eliot" n="6"><placeName>Eliot Bridge</placeName></place>
+          <place xml:id="finish" n="7"><placeName>Finish, near Christian Herter Park</placeName></place>
+        </listPlace>
+      </settingDesc>
+    </profileDesc>
+
+    <revisionDesc>
+      <change when="2026-11-15" who="#encoder" n="2.0">Revised the encoding: spoken-text module, crew and course metadata, glossary, call-type analysis, corrected notes, removed hotlinked images, valid rendition syntax.</change>
+      <change n="1.0">Initial student encoding (preserved unchanged in original/).</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div type="warmup" n="1" xml:id="warmup">
+        <head>Warm-up: approaching the start</head>
+        <u who="#cipollone"><shift feature="tempo" new="urgent"/>Push, <term ref="#gl-send">send</term>.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone"><shift feature="loud" new="p"/>Fo'</u>
+        <u who="#cipollone">Fi' <term ref="#gl-chaa">chaa</term></u>
+        <u who="#cipollone">Six chaa</u>
+        <u who="#cipollone">Seven cha</u>
+        <u who="#cipollone">Eight —<note type="editorial" place="bottom">Cipollone is counting strokes in a focused piece. A cox may call "a focused ten for legs": for ten strokes each rower concentrates on one part of the technique, here pushing hard with the legs.</note></u>
+        <u who="#cipollone" ana="#ct-rate"><shift feature="loud" new="f"/>In two we <term ref="#gl-shift">shift</term></u>
+        <u who="#cipollone" ana="#ct-rate">One, we're at <measure type="strokeRate" unit="spm" quantity="36">36</measure></u>
+        <u who="#cipollone" ana="#ct-rate">Power... now shift!</u>
+        <u who="#cipollone">Push, send,</u>
+        <u who="#cipollone"><num value="2">2</num> chaa</u>
+        <u who="#cipollone">Three</u>
+        <u who="#cipollone">Fo'</u>
+        <u who="#cipollone">Fi', <term ref="#gl-easy-all">easy all</term>, easy all...</u>
+        <u who="#cipollone" ana="#ct-steering">We got crews around, <term ref="#gl-paddle">paddle</term>, paddle.</u>
+        <u who="#cipollone" ana="#ct-steering">Give us a little room, <orgName ref="#penn">Penn</orgName>...</u>
+        <u who="#cipollone"><term ref="#gl-weigh-enough">Weigh enough</term>, watch the oars on <term ref="#gl-port">port</term> side... ok, all eight ready, go.</u>
+        <incident><desc>Two strokes</desc></incident>
+        <u who="#cipollone">Sharp. Weigh enough.</u>
+        <u who="#cipollone">Ok, how do you guys feel on warmup? Everybody's ready?</u>
+        <u who="#cipollone">Breathing, getting ready guys.</u>
+      </div>
+
+      <div type="race" n="2" xml:id="race">
+        <head>The race</head>
+        <note type="context" rendition="#context">After the warm-up has set the rhythm and raised the athletes' heart rates, the crews enter the course in their assigned order. In a head race, crews start one at a time and race the clock. The order in 1997 was based on earlier results, and US Rowing started first.</note>
+        <u who="#official">This is the start of the Championship 8. Ok, let's get started. US Rowing on the paddle, ready, row!</u>
+        <u who="#cipollone">Ready all...</u>
+        <u who="#cipollone">Ready all, rrrr-ow!</u>
+        <u who="#cipollone" ana="#ct-technique"><shift feature="tempo" new="calm"/>Ok, <term ref="#gl-half-power">half power</term> on this <term ref="#gl-finish">finish</term>, good, sharp and clean. Ok guys, they're going to <term ref="#gl-stall">stall</term>, so let's <seg type="expletive">f—g</seg> <term ref="#gl-walk">walk away</term>, relaxed, 90 percent now... three to <term ref="#gl-build">build</term>...</u>
+        <u who="#cipollone"><shift feature="voice" new="growl"/><shift feature="pitch" new="low"/><seg rendition="#shout">On this one!</seg></u>
+        <u who="#cipollone">Legs...</u>
+        <u who="#cipollone">Legs...</u>
+        <u who="#cipollone">Legs! Give it! Nail this <seg type="expletive">motherf—r</seg>, now! You're on!</u>
+        <u who="#cipollone">Ha! <seg rendition="#shout">HAAA!</seg></u>
+        <u who="#cipollone"><num value="2">2</num></u>
+        <u who="#cipollone"><num value="3">3</num></u>
+        <u who="#cipollone">Fo'</u>
+        <u who="#cipollone" ana="#ct-position"><num value="5">5</num> cha! <term ref="#gl-walk">Walking!</term></u>
+        <u who="#cipollone"><num value="6">6</num> That's it!</u>
+        <u who="#cipollone"><num value="7">7</num></u>
+        <u who="#cipollone"><num value="8">8</num></u>
+        <u who="#cipollone"><num value="9">9</num></u>
+        <u who="#cipollone"><num value="10">10</num> chaa!</u>
+        <u who="#cipollone"><num value="1">1</num></u>
+        <u who="#cipollone"><num value="2">2</num></u>
+        <u who="#cipollone" ana="#ct-rate"><measure type="strokeRate" unit="spm" quantity="39">39!</measure></u>
+        <u who="#cipollone" ana="#ct-rate"><shift feature="tempo" new="enunciated"/>In two, we shift two beats!</u>
+        <u who="#cipollone"><num value="1">1</num></u>
+        <u who="#cipollone" ana="#ct-rate">Shift, now!</u>
+        <u who="#cipollone"><shift feature="tension" new="intense"/>Legs, send.</u>
+        <u who="#cipollone">Legs, send.</u>
+        <u who="#cipollone">Legs, send.</u>
+        <u who="#cipollone" ana="#ct-rate"><shift feature="tempo" new="calm"/><measure type="strokeRate" unit="spm" quantity="36">36</measure>, good. One part <term ref="#gl-drive">drive</term>...</u>
+        <u who="#cipollone">Attack!</u>
+        <u who="#cipollone">Legs, that's it.</u>
+        <incident who="#crowd"><desc>Cheering from shore</desc></incident>
+        <u who="#cipollone" ana="#ct-motivation">Now <persName ref="#madigan">Madigan</persName>, go! Take that handle with you, and attack it. That's it.</u>
+        <incident><desc>The calls echo as the crew passes under the <placeName ref="#bu-bridge">BU Bridge</placeName></desc></incident>
+        <u who="#cipollone">Push, chaaa! Push, chaaa!</u>
+        <u who="#cipollone" ana="#ct-technique">We got <term ref="#gl-flat-water">flat water</term>, <seg type="call" xml:id="call-ankles"><seg type="expletive">A**</seg> to ANKLES</seg>, NOW!<note type="query" target="#call-ankles">Version 1.0 flagged this as a new call. A possible reading is a cue to compress fully at the catch, but this edition has not confirmed it.</note></u>
+        <u who="#cipollone">Go!</u>
+        <u who="#cipollone" ana="#ct-motivation"><persName ref="#callahan">Callahan</persName>, this is your <seg type="expletive">fucking</seg> <term ref="#gl-seat-race">seat race</term>, show 'em. Now, go!</u>
+        <u who="#cipollone">Legs, send, Legs, send. Legs, send. Legs, send</u>
+        <u who="#cipollone" ana="#ct-position">That's it, walk away from those <seg type="expletive">fuckers</seg>!</u>
+        <u who="#cipollone">Now! Send!</u>
+        <u who="#cipollone">Legs, send.</u>
+        <u who="#cipollone" ana="#ct-rate"><shift feature="voice" new="whisper"/>Pushing, you're right on <measure type="strokeRate" unit="spm" quantity="36">36</measure>.</u>
+        <u who="#cipollone" ana="#ct-info">Now listen up! <measure type="elapsed" quantity="1" unit="min">One minute down</measure>, let's get focused on rhythm, and speed through. Here we go, now speed <seg xml:id="speed-five">five</seg>.<note type="query" target="#speed-five">Probably a five-stroke focused piece on boat speed through the stroke, which fits the count of four and five that follows.</note></u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send. Yeah.</u>
+        <u who="#cipollone"><num value="4">Four</num></u>
+        <u who="#cipollone"><num value="5">Five.</num></u>
+        <u who="#cipollone" ana="#ct-steering">Good, driving. Stay clean, and flat. <term ref="#gl-rudder">On the rudder</term>, here we go.</u>
+        <u who="#cipollone">Push, chaaaaaa!</u>
+        <u who="#cipollone">Push, chaaaaaa!</u>
+        <u who="#cipollone">Push, chaaaaaa!</u>
+        <u who="#cipollone">That's it, <term ref="#gl-port">port</term> sides are cranking!</u>
+        <u who="#cipollone">Drrr-ive.</u>
+        <u who="#cipollone">Drrr-ive.</u>
+        <u who="#cipollone">Drrr-ive.<note type="editorial">Repetition for effect and emphasis is common in coxswain calls.</note></u>
+        <u who="#cipollone" ana="#ct-motivation"><persName ref="#richter">Richter</persName>, you do not <term ref="#gl-sit">sit</term>, for one <seg type="expletive">fucking</seg> stroke! You drive the <term ref="#gl-starboard">starboard</term> side.</u>
+        <u who="#cipollone" ana="#ct-motivation">That's it. Now <persName ref="#wherley">Wherley</persName>!</u>
+        <u who="#cipollone">Push send.</u>
+        <u who="#cipollone" ana="#ct-steering">On the rudder.</u>
+        <u who="#cipollone"><shift feature="voice" new="whisper"/>That's it.</u>
+        <u who="#cipollone" ana="#ct-motivation">Good <persName ref="#gibbons">Giboon</persName>, good <seg type="expletive">fucking</seg> rhythm. Now <persName ref="#henry">Philthy</persName>, here we go.</u>
+        <u who="#cipollone" ana="#ct-steering">On the rudder.</u>
+        <u who="#cipollone" ana="#ct-motivation">Legs, chaaa. Legs, chaaa. Legs, chaaa. Good, driving it and push. Let's walk away, driving it now, let's walk away. <persName ref="#madigan">Madigan</persName>, good rhythm, take the handle with you, now.</u>
+        <u who="#cipollone">Push, chaaa. Push, chaaa.</u>
+        <u who="#cipollone" ana="#ct-rate"><measure type="strokeRate" unit="spm" quantity="35.5">35 and a half</measure>, <term ref="#gl-catch">catches</term> stay in, stay in.</u>
+        <u who="#cipollone">Pop, send.</u>
+        <u who="#cipollone">Pop, send.</u>
+        <u who="#cipollone">Pop, send.</u>
+        <incident><desc>There is less noise from the crew's <term ref="#gl-rigger">riggers</term></desc></incident>
+        <u who="#cipollone">That's it.</u>
+        <u who="#cipollone" ana="#ct-technique">Now, here comes a <term ref="#gl-headwind">headwind</term>, sit up and drive. Legs, send. Legs, send.</u>
+        <u who="#cipollone" ana="#ct-technique">Catches in all 8, let's go five strokes for catches, now go!</u>
+        <u who="#cipollone"><num value="1">1</num>, here we go</u>
+        <u who="#cipollone" ana="#ct-steering"><num value="2">2</num>, I got a line on the bridge.</u>
+        <u who="#cipollone">Chaa</u>
+        <u who="#cipollone">Fo'</u>
+        <u who="#cipollone" ana="#ct-technique">Five, <measure type="strokeRate" unit="spm" quantity="35">35</measure>. Catches in, <shift feature="voice" new="whisper"/>that's it. Catches in.</u>
+        <u who="#cipollone" ana="#ct-motivation"><shift feature="voice" new="normal"/>Guys, you're the mean <seg type="expletive">fucking</seg> dogs, drive this thing, now.</u>
+        <u who="#cipollone">That's it. Send. Legs, send. Legs, send.</u>
+        <u who="#cipollone" ana="#ct-motivation"><persName ref="#richter">Richter</persName>, you can see them, I want you driving us away from them.</u>
+        <u who="#cipollone">Now, go!</u>
+        <u who="#cipollone">That's it, power! You've got flat water, <shift feature="tension" new="frenzied"/>attack, attack</u>
+        <u who="#cipollone" ana="#ct-info">Now, <measure type="distance" unit="m" quantity="450">450</measure> until the first <seg type="expletive">fucking</seg> <term ref="#gl-commit">commitment</term>, <persName ref="#wherley">Wherley</persName>, <persName ref="#wherley">Wherley</persName>! Now, drive it, that's it!</u>
+        <u who="#cipollone">Legs, send.</u>
+        <u who="#cipollone">Legs, send.</u>
+        <u who="#cipollone">Good, drive it, push.</u>
+        <u who="#cipollone">Push, send, push, send.</u>
+        <u who="#cipollone" ana="#ct-motivation">Do not sit! Do not sit now! Seven, six and five, go!<note type="editorial">Seats 7, 6 and 5: <persName ref="#richter">Richter</persName>, <persName ref="#henry">Henry</persName> and <persName ref="#wherley">Wherley</persName>.</note></u>
+        <u who="#cipollone">Legs! Legs, send! Legs, send!</u>
+        <u who="#cipollone" ana="#ct-position"><shift feature="tempo" new="conversational"/>That's it, walk away. Walk — the <seg type="expletive">fuck</seg> — away! Good rhythm, good rhythm!</u>
+        <u who="#cipollone" ana="#ct-technique">Now listen up. <term ref="#gl-bow-pair">Bow pair</term>, one part drive, attaaack, now!</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone"><shift feature="voice" new="whisper"/>That's it.</u>
+        <u who="#cipollone" ana="#ct-rate"><shift feature="voice" new="normal"/>Work it, work the rhythm, attacking. Gotta come up one, get ready...</u>
+        <u who="#cipollone">On this, kick it.</u>
+        <u who="#cipollone">Pop, make it light.</u>
+        <u who="#cipollone">Pop, make it light.</u>
+        <u who="#cipollone" ana="#ct-technique">That's it. Back out to even <term ref="#gl-spacing">spacing</term>, now go!</u>
+        <u who="#cipollone">Legs!</u>
+        <u who="#cipollone" ana="#ct-info">Ok guys, here's the first bridge, in the wind. Get ready to commit... ready?<note type="editorial" place="bottom">The first bridge after the BU Bridge is the <placeName ref="#river-st">River Street Bridge</placeName>. This edition infers the identification from the order of the course. The source does not state it.</note></u>
+        <incident><desc>Under the bridge, the call echoes loudly</desc></incident>
+        <u who="#cipollone"><seg rendition="#shout">COMMI-I-I-I-I-IT!</seg></u>
+        <u who="#cipollone">Legs!</u>
+        <u who="#cipollone">Legs.</u>
+        <u who="#cipollone" ana="#ct-info">That's it, this is <measure type="duration" quantity="1" unit="min">one minute</measure> commitment, push. Push the boat.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone" ana="#ct-position">Walking away, walking away from <orgName ref="#princeton">Princeton</orgName>.</u>
+        <u who="#cipollone">Go, now, push, chaaaa.</u>
+        <u who="#cipollone" ana="#ct-info">Drive, you're halfway through the commitment, now go!</u>
+        <u who="#cipollone">Legs!</u>
+        <u who="#cipollone"><shift feature="voice" new="whisper"/>That's it!</u>
+        <u who="#cipollone"><shift feature="voice" new="normal"/>Legs!</u>
+        <u who="#cipollone" ana="#ct-motivation">Now, <persName ref="#borcherding">Borcherding</persName>, <persName ref="#borcherding">Borcherding</persName>, get it in, get it in, and go. Boom, in the headwind. That's it!</u>
+        <u who="#cipollone">Driving, drive, send.</u>
+        <u who="#cipollone" ana="#ct-rate">Catches in, <measure type="strokeRate" unit="spm" quantity="34.5">34 and a half</measure>. Who's going to assault?</u>
+        <u who="#cipollone">Push, now.</u>
+        <u who="#cipollone">Push, now.</u>
+        <u who="#cipollone"><shift feature="voice" new="whisper"/>That's it!<note type="editorial">The whisper emphasizes the call.</note></u>
+        <u who="#cipollone" ana="#ct-info"><shift feature="voice" new="normal"/>Good, coming to the end of the bridge, end of the commitment, now is where you <seg type="expletive">fucking</seg> hang tough.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone" ana="#ct-info">Good, <persName ref="#gibbons">Giboon</persName>, you're <measure type="elapsed" quantity="5" unit="min">five minutes in</measure>, drive it, now go.</u>
+        <u who="#cipollone">That's it, legs, chaaaa, legs, chaaa.</u>
+        <incident who="#crowd"><desc>Cheering from around the <placeName ref="#western-ave">Western Avenue Bridge</placeName></desc></incident>
+        <u who="#cipollone" ana="#ct-motivation">They're cheering for you, you go now! Push it!</u>
+        <u who="#cipollone" ana="#ct-motivation"><persName ref="#richter">Richter</persName>, <orgName ref="#princeton">Princeton</orgName>'s going to win this <seg type="expletive">fucking</seg> piece, huh? What do you think of that?<note type="editorial">Richter rowed for Princeton ('97). The call taunts him with his own college crew.</note></u>
+        <u who="#cipollone">Now, go!</u>
+        <u who="#cipollone">Legs</u>
+        <u who="#cipollone">Legs</u>
+        <u who="#cipollone">Legs</u>
+        <u who="#cipollone">Good.</u>
+        <u who="#cipollone" ana="#ct-steering">Slight rudder, now, that's it.</u>
+        <u who="#cipollone">Push, chaaa.</u>
+        <u who="#cipollone">Push, chaaa.</u>
+        <u who="#cipollone">Push, chaaa.</u>
+        <u who="#cipollone">Going, that's it, driving it. Guys, you must attack, now.</u>
+        <incident><desc>The cheering dies down. There is very little outside noise.</desc></incident>
+        <u who="#cipollone" ana="#ct-position">We're in the quiet, good time to walk away. Here we go.</u>
+        <u who="#cipollone">Push!</u>
+        <u who="#cipollone" ana="#ct-steering">The next turn will be to <term ref="#gl-port">port</term>, and it's the big dog. Here we go.</u>
+        <u who="#cipollone">Push, send</u>
+        <u who="#cipollone">Push, send</u>
+        <u who="#cipollone">Push, send</u>
+        <u who="#cipollone" ana="#ct-rate">Driving, that's it, starboards attack it, cadence is <measure type="strokeRate" unit="spm" quantity="35">35</measure>, good! Going, go now.</u>
+        <u who="#cipollone">Push, send</u>
+        <u who="#cipollone">Push, send</u>
+        <u who="#cipollone">Push, send</u>
+        <u who="#cipollone" ana="#ct-steering">Good, a little bit of rudder.</u>
+        <u who="#cipollone"><shift feature="voice" new="whisper"/>That's it.</u>
+        <u who="#cipollone"><shift feature="voice" new="normal"/>Going, now.</u>
+        <u who="#cipollone">Going, now.</u>
+        <u who="#cipollone" ana="#ct-steering">Starboard sides, get ready to attack, get ready to go, ready,</u>
+        <u who="#cipollone"><seg rendition="#shout">ATTAAACCKKK!</seg><note type="editorial">On a turn to port, a burst from the starboard rowers helps swing the boat with less rudder.</note></u>
+        <u who="#cipollone">Legs</u>
+        <u who="#cipollone">Legs</u>
+        <u who="#cipollone"><shift feature="voice" new="whisper"/>That's it.</u>
+        <u who="#cipollone"><shift feature="voice" new="normal"/>Legs</u>
+        <u who="#cipollone">Good</u>
+        <u who="#cipollone" ana="#ct-steering">Here we go guys, we're going to nail this turn. That's it; going starboards...</u>
+        <u who="#cipollone" ana="#ct-steering">Straight now! Straight now!</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone">Push, send.</u>
+        <u who="#cipollone" ana="#ct-steering">That's it. Get ready, coming on the rudder, starboards now... Go!</u>
+        <incident who="#crowd"><desc>The cheering begins to swell</desc></incident>
+        <u who="#cipollone" ana="#ct-motivation">Legs! Yeah, <seg type="expletive">fuck</seg> yeah, USA, go! That's it, go! Yeah, driving it, <seg type="expletive">fuck</seg> yeah! Push it!</u>
+        <u who="#cipollone" ana="#ct-motivation">They're cheering for you, they're cheering for you right now. Push it.</u>
+        <u who="#cipollone" ana="#ct-motivation">Now, tell me <persName ref="#callahan">Callahan</persName>, who's tough?</u>
+        <u who="#cipollone">Now, drive... the legs!</u>
+        <u who="#cipollone">Legs, now!</u>
+        <u who="#cipollone">Legs, now!</u>
+        <u who="#cipollone">You must <seg type="expletive">fucking</seg> go...</u>
+        <u who="#cipollone"><seg rendition="#shout">NOOWWW!</seg></u>
+        <u who="#cipollone" ana="#ct-motivation"><shift feature="pitch" new="low"/>Yeah, <persName ref="#henry">Philthy</persName>, yeah, <persName ref="#henry">Philthy</persName>! You tear this... <gap reason="unprintable"><desc>unprintable, even with disclaimer (source note)</desc></gap></u>
+        <u who="#cipollone" ana="#ct-technique"><shift feature="tempo" new="cool"/>I want you to refocus. Sit up tall, and push the legs down, with the handle, <persName ref="#madigan">Madigan</persName>, go, NOW!</u>
+      </div>
+
+      <div type="finish" n="3" xml:id="finish-section">
+        <head>The finish</head>
+        <u who="#cipollone" ana="#ct-info">Guys, listen up, <measure type="elapsed" quantity="12.67" unit="min">12:40 down</measure>, I think you can break the <seg type="expletive">fucking</seg> record!</u>
+        <u who="#cipollone">Get ready, get ready...</u>
+        <u who="#cipollone">Go now!</u>
+        <note type="context" rendition="#context">The crew finished first in an official time of <measure type="raceTime" quantity="838.9" unit="s">13:58.9</measure> and set a new course record for the men's Championship Eight. Harvard and Princeton were second and third, and Penn was fifth. The 1997 race was the 32nd Head of the Charles, because the 1996 regatta had been cancelled by a storm. The record stood for twenty years, until California rowed 13:27 in 2017.<note type="correction">Version 1.0 called the regatta a "32 year old race" and gave no time. Sources: HOCR course champions list (hocr.org), 1997 official results (hocr.org), and the Daily Pennsylvanian, October 1997.</note></note>
+      </div>
+    </body>
+
+    <back>
+      <div type="glossary" xml:id="glossary">
+        <head>Glossary of rowing terms and calls</head>
+        <list type="gloss">
+          <label xml:id="gl-send">send</label><item>Paired with "push" or "legs" to set the rhythm: push hard with the legs, then send the boat forward so it runs freely between strokes.</item>
+          <label xml:id="gl-chaa">chaa</label><item>A sharp sound the coxswain makes on the drive to mark the rhythm and add energy. Coxswains use many calls, phrases and sounds, depending on the moment in the race and what the rowers need.</item>
+          <label xml:id="gl-shift">shift</label><item>A change of stroke rate. Here the crew raises the rate after the start sprint or settles it to a lower rate. "In two we shift" warns the crew that the change comes in two strokes.</item>
+          <label xml:id="gl-rate">stroke rate (cadence)</label><item>Strokes per minute (spm). Calls such as 36, 39 and "35 and a half" report the crew's rate.</item>
+          <label xml:id="gl-easy-all">easy all</label><item>A call to ease off or stop the current effort.</item>
+          <label xml:id="gl-paddle">paddle</label><item>Rowing lightly, with little pressure.</item>
+          <label xml:id="gl-weigh-enough">weigh enough</label><item>A traditional call to stop rowing. The rowers rest their oars on the water.</item>
+          <label xml:id="gl-half-power">half power</label><item>Rowing at about half pressure, often used to settle the boat.</item>
+          <label xml:id="gl-build">build</label><item>Raising the pressure over a set number of strokes ("three to build").</item>
+          <label xml:id="gl-stall">stall</label><item>When a crew loses speed or momentum.</item>
+          <label xml:id="gl-walk">walk / walking away</label><item>Gaining on another crew, or extending a lead, seat by seat.</item>
+          <label xml:id="gl-drive">drive</label><item>The working phase of the stroke, from the catch to the finish, when the legs, back and arms move the boat.</item>
+          <label xml:id="gl-catch">catch</label><item>The moment the blade enters the water. "Catches in" asks for quick, together blade entry.</item>
+          <label xml:id="gl-finish">finish</label><item>The end of the drive, when the blade comes out of the water.</item>
+          <label xml:id="gl-spacing">spacing</label><item>The run of the boat between strokes, and the ratio of drive to recovery. "Back out to even spacing" asks the crew to restore its usual rhythm after a push.</item>
+          <label xml:id="gl-flat-water">flat water</label><item>Calm water with no chop, good for long, powerful strokes.</item>
+          <label xml:id="gl-headwind">headwind</label><item>Wind blowing against the boat's direction of travel. The standard technical response is to sit up and drive.</item>
+          <label xml:id="gl-sit">sit (do not sit)</label><item>Easing off while appearing to row. "Do not sit" demands full effort on every stroke.</item>
+          <label xml:id="gl-commit">commit / commitment</label><item>A planned, sustained push over a set distance or time, here one minute through a bridge.</item>
+          <label xml:id="gl-seat-race">seat race</label><item>A selection test in which two rowers swap boats so coaches can compare them. Calling the race Callahan's "seat race" tells him his seat is on the line.</item>
+          <label xml:id="gl-rudder">on the rudder</label><item>The coxswain is steering, which adds drag. The crew should stay steady through it.</item>
+          <label xml:id="gl-port">port</label><item>The rowers whose oars are on the boat's left side, as seen by the coxswain facing forward. A turn "to port" bends left.</item>
+          <label xml:id="gl-starboard">starboard</label><item>The rowers whose oars are on the boat's right side, as seen by the coxswain.</item>
+          <label xml:id="gl-bow-pair">bow pair</label><item>Seats 1 and 2, the two rowers nearest the bow, which is the front of the boat. Here they are Callahan and Holbrook.<note type="correction">Version 1.0 said the bow pair sit "in the very back of the boat". The bow is the front of the boat, but it is behind the rowers, who face the stern.</note></item>
+          <label xml:id="gl-rigger">rigger</label><item>The metal or carbon frame that holds the oarlock away from the hull.</item>
+        </list>
+      </div>
+    </back>
+  </text>
+</TEI>
